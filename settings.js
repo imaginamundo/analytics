@@ -1,4 +1,8 @@
+const defaultPort = 8000;
+const argPort = flags.parse(args).port;
+const port = argPort ? Number(argPort) : defaultPort;
+
 export default {
-  port: 8000,
+  port,
   hostname: 'dio.dev'
 };
