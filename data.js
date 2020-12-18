@@ -1,3 +1,5 @@
+import settings from './settings.js';
+
 const data = { visitors: 0, languages: {}, urls: {} };
 
 function countVisitors() { data.visitors++ };
@@ -11,7 +13,6 @@ function countLanguages(language) {
 
 function countUrls(url) {
   url = new URL(url);
-  console.log(url);
   const origin = url.origin;
   const pathname = url.pathname;
   if (data.urls[ origin + pathname ]) {
