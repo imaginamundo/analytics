@@ -7,6 +7,6 @@ const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-console.log(`Running on http://localhost:${ port }`);
+console.log(`Running on http://localhost:${ settings.port }`);
 
 await app.listen({ port: settings.port });
