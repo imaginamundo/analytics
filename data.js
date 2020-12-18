@@ -41,5 +41,5 @@ export default function updateData(context) {
 
   countVisitors();
   countLanguages(context.request.headers.get('accept-language'));
-  countUrls(url);
+  countUrls(context.request.url.searchParams.get('url'));
 }
